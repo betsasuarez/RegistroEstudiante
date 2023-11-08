@@ -1,63 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RegistroEstudiante.MainPage">
+<ContentPage
+    x:Class="RegistroEstudiante.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
             Padding="30,0"
-            VerticalOptions="Center">
+            Spacing="25"
+            VerticalOptions="Start">
 
 
             <Label
-                Text="Registro de Estudiantes"
                 FontSize="32"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Start"
+                Text="Registro de Estudiantes" />
 
             <Label
-                Text="Nombres:"
                 FontSize="18"
-                HorizontalOptions="Start" />
+                HorizontalOptions="Start"
+                Text="Nombres:" />
 
-            <Entry 
+            <Entry
                 x:Name="NombresEntry"
-                HorizontalOptions="StartAndExpand" 
-                WidthRequest="350"
+                HorizontalOptions="StartAndExpand"
+                Placeholder="Ingrese su nombre"
+                PlaceholderColor="Gray"
                 Text="{Binding Nombres}"
-                PlaceholderColor="Gray" Placeholder="Ingrese su nombre"/>
+                WidthRequest="350" />
 
             <Label
-              Text="Apellidos:"
-              FontSize="18"
-               HorizontalOptions="Start" />
+                FontSize="18"
+                HorizontalOptions="Start"
+                Text="Apellidos:" />
 
 
-            <Entry 
+            <Entry
                 x:Name="ApellidosEntry"
-                HorizontalOptions="StartAndExpand" 
-                WidthRequest="350"
+                HorizontalOptions="StartAndExpand"
+                Placeholder="Ingrese su apellido"
+                PlaceholderColor="Gray"
                 Text="{Binding Apellidos}"
-                PlaceholderColor="Gray" Placeholder="Ingrese su apellido"/>
+                WidthRequest="350" />
 
 
             <Label
-             Text="Materia:"
-              FontSize="18"
-              HorizontalOptions="Start" />
+                FontSize="18"
+                HorizontalOptions="Start"
+                Text="Materia:" />
 
-            <Entry 
+            <Entry
                 x:Name="MateriaEntry"
-                HorizontalOptions="StartAndExpand" 
-                WidthRequest="350"
+                HorizontalOptions="StartAndExpand"
+                Placeholder="Ingrese la materia de su preferencia"
+                PlaceholderColor="Gray"
                 Text="{Binding Materia}"
-                PlaceholderColor="Gray" Placeholder="Ingrese la materia de su preferencia"/>
+                WidthRequest="350" />
 
             <Button
                 x:Name="ConfirmarBtn"
-                Text="Confirmar"
                 Clicked="ConfirmarBtn_Clicked"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"
+                Text="Confirmar" />
 
         </VerticalStackLayout>
     </ScrollView>
